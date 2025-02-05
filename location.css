@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Styling for Map */
+  #map {
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Branch List Styles */
+  h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+  }
+  
+  #branch-list {
+    margin: 20px auto;
+    padding: 0;
+    list-style-type: none;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  #branch-list li {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0; /* Adds single line gap between each branch */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #branch-list li:hover {
+    transform: translateY(-5px);
+  }
+  
+  #branch-list li span {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 8px 16px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  button a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+  
+  
+ 

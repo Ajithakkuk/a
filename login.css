@@ -1,0 +1,119 @@
+
+
+/* General Reset */
+body, h1, h2, p, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('images/newbglog.png'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  height: 87vh; /* Ensures it spans the full viewport height */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+}
+/* Right Section */
+.right-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 320px; /* Matches other form dimensions */
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 20px;
+  color: #4d4d4d; /* Consistent header color */
+}
+
+.login-form p {
+  font-size: 14px;
+  color: #555; /* Unified text color */
+  margin-top: 5px;
+}
+
+
+
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd; /* Unified border styles */
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555; /* Consistent small text color */
+}
+
+.login-btn {
+  background-color: #28a745; /* Consistent button style */
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #218838; /* Hover effect matches previous buttons */
+}
+
+.register-link {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.register-link a {
+  color: #28a745; /* Matches button colors for consistency */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #218838; /* Hover effect for links */
+}
+
+
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+
+
+.logo {
+width: 60px;
+height: auto;
+border-radius: 5px;
+margin-bottom: 10px;
+}

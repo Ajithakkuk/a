@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Reservation</title>
+    <link rel="stylesheet" href="reservation.css">
+     <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<!-- Bootstrap JS and Popper.js (required for some components) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">COMPLETE RESERVATION</div>
+        <div class="sub-header">
+            Upon completing this reservation enquiry, you will receive:
+            <br>Your rental voucher to produce on arrival at the rental desk and a toll-free customer support number.
+        </div>
+        <div class="location-date">
+            <div class="section-title">Location & Date</div>
+            <div class="info">
+                <div class="info-icon">
+                    <img src="images/calendar.png" alt="Calendar Icon">
+                    <h3>Pick-Up Time: 01/21/2025 at 12:00 AM</h3>
+                </div>
+                <div class="info-icon">
+                    <img src="images/calendar.png" alt="Calendar Icon">
+                    <h3>Drop-Off Time: 02/06/2025 at 12:00 AM</h3>
+                </div>
+            </div>
+            <div class="info">
+                <div class="info-icon">
+                    <img src="images/location.png" alt="Location Icon">
+                    <h3>Pick-Up Location: Santa Monica - 2102 Lincoln Blvd</h3>
+                </div>
+                <div class="info-icon">
+                    <img src="images/location.png" alt="Location Icon">
+                    <h3>Drop-Off Location: Santa Monica - 2102 Lincoln Blvd</h3>
+                </div>
+            </div>
+        </div>
+        <div class="car-details">
+            <img src="images/lamborghini_urus_4k_5-t2-removebg-preview.png" alt="VW Golf VII">
+        </div>
+        <div class="personal-info">
+            <div class="section-title">Personal Information</div>
+            <form>
+                <div class="form-group">
+                    <div class="half-width">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+                    </div>
+                    <div class="half-width">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="half-width">
+                        <label for="phone-number">Phone Number:</label>
+                        <input type="text" id="phone-number" name="phone-number" placeholder="Enter your phone number">
+                    </div>
+                    <div class="half-width">
+                        <label for="age">Age:</label>
+                        <select id="age" name="age">
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="full-line address">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your street and number">
+                    </div>
+                </div>
+                <div class="form-group city-zip">
+                    <div class="city">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" placeholder="Enter your city">
+                    </div>
+                    <div class="zip">
+                        <label for="zip-code">Zip Code:</label>
+                        <input type="text" id="zip-code" name="zip-code" placeholder="Enter your zip code">
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Please send me the latest news and updates</label>
+                </div>
+                <div class="footer-buttons">
+                    <button type="button" class="cancel">Cancel</button>
+                    <button type="submit" class="reserve">Reserve Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

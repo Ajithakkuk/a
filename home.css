@@ -1,0 +1,214 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 24px;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.car-cards-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.car-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  flex: 0 0 auto;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.car-card img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+.car-card h3 {
+  font-size: 18px;
+  color: #4a4a4a;
+}
+
+.car-card .brand {
+  font-size: 14px;
+  color: #7d7d7d;
+}
+
+.car-card .car-details {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #7d7d7d;
+}
+
+.car-card .price {
+  font-size: 18px;
+  color: #2d89ef;
+  margin-top: 10px;
+}
+
+.car-card .price span {
+  font-size: 14px;
+  color: #7d7d7d;
+}
+#carouselSection { 
+  background-color: #f8f9fa;
+  padding: 0px 0;
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}  
+  
+/* Styling for carousel images */
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+  }    
+  
+  /* Styling for the carousel captions */
+  .carousel-caption {
+    background-color: hsl(135, 75%, 32%);
+    border-radius: 5px;
+    padding: 20px 10px;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  
+  .carousel-caption p {
+    font-size: 16px;
+    color: #d1d1d1;
+    margin: 0;
+  }
+
+  /* Add transition effects for smooth sliding */
+  .carousel-item {
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  
+  /* Indicators styling */
+  .carousel-indicators [data-bs-target] {
+    background-color: #000;
+    width: 12px;
+    height: 12px;
+    border-radius: 10%;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #007bff;
+  }
+  /* Custom CSS for "Book Now" Button */
+.book-btn {
+  background-color: black; /* Primary blue color */
+  color: #ffffff; /* White text */
+  padding: 10px 20px; /* Adjust the padding for better sizing */
+  border-radius: 2px; /* Rounded corners */
+  font-size: 1rem; /* Slightly larger text */
+  font-weight: bold; /* Make the text bold */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline from links */
+  display: inline-block; /* Makes the button inline with other content */
+}
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.vehicle-models {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.vehicle-models h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333333;
+}
+
+.vehicles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.vehicle-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.vehicle-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.vehicle-card .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.vehicle-card .book-btn {
+    padding: 10px 20px;
+    background-color: green;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.vehicle-card .book-btn:hover {
+    background-color: green;
+}    

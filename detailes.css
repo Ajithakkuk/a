@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    padding: 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .car-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+
+  .car-image img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .car-details {
+    margin-left: 20px;
+    flex: 1;
+  }
+
+  .car-details h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .car-details p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .car-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 10px;
+  }
+
+  .traveller-details {
+    width: 50%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+
+  .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .traveller-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+
+  .traveller-form input,
+  .traveller-form select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .car-location,
+  .features,
+  .cancellation {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .checkbox-container {
+    display: flex; /* Arrange items in a row */
+    align-items: center; /* Align checkbox and label vertically */
+    gap: 8px; /* Add spacing between checkbox and label */
+    margin-bottom: 20px;
+  }
+
+  .checkbox-container input[type="checkbox"] {
+    margin: 0; /* Remove browser default margins */
+    width: 16px; /* Standard checkbox size */
+    height: 16px; /* Standard checkbox size */
+  }
+
+  .checkbox-container label {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.2; /* Match line height with checkbox */
+    cursor: pointer;
+  }
+
+
+  .car-right {
+width: 50%;
+display: flex;
+flex-direction: column;
+}
+
+.car-location {
+width: 100%;
+border-bottom: 1px solid #ddd;
+}
+
+.features,
+.cancellation {
+width: 100%;
+padding: 20px;
+}
+
+  .car-location {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .features {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .cancellation {
+    margin-top: 0;
+  }
+
+  .car-location p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .car-location button {
+    padding: 10px 20px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .features-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .features-list div {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+
+  .features-list div:before {
+    content: '\2713';
+    color: #28a745;
+    margin-right: 5px;
+    font-weight: bold;
+  }
+
+  .cancellation p {
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  /* Modal styling */
+.modal {
+display: none; /* Hidden by default */
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+background-color: #fff;
+margin: 10% auto;
+padding: 20px;
+border: 1px solid #ddd;
+width: 50%;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+margin-bottom: 15px;
+font-size: 18px;
+}
+
+.modal-content p {
+margin-bottom: 10px;
+color: #555;
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+}
+
+
+  .make-payment {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+   
+  /* t&c */
+
+  h2 {
+          font-size: 1.5rem;
+          color: #4CAF50;
+          margin-top: 20px;
+      }
+
+      p {
+          margin: 10px 0;
+      }
+
+      ul {
+          margin: 10px 0;
+          padding-left: 20px;
+      }
+
+      ul li {
+          margin: 5px 0;
+      }
+
+      .footer {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 0.9rem;
+          color: #666;
+      }
+
+      a {
+          color: #4CAF50;
+          text-decoration: none;
+      }
+
+      a:hover {
+          text-decoration: underline;
+      }
+
+  @media (max-width: 768px) {
+    .car-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .car-image img {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .car-details {
+      margin-left: 0;
+    }
+
+    .features-list {
+      grid-template-columns: 1fr;
+    }
+
+    .traveller-details,
+    .car-location,
+    .features,
+    .cancellation {
+      width: 100%;
+      border-right: none;
+    }
+  }

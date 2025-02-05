@@ -1,0 +1,197 @@
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  background-color: green;
+  padding: 10px 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.green {
+  color: white;
+}
+
+/* Navigation menu styling */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Main content area */
+main {
+  background-color: #e9f3e9;
+  padding: 20px;
+}
+
+/* Reservation Section */
+.reservation-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Form container styling */
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Submit button styling */
+.submit-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-button:hover {
+  background-color: darkgreen;
+}
+
+/* Vehicle Display Section */
+.vehicle-display h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.vehicle-display p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.vehicle-display img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Sign In/Login Buttons */
+.auth-options {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.auth-options a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #28a745;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-options a:hover {
+  background-color: #218838;
+  color: #ffffff;
+}
+
+.auth-options .logout-button {
+  background-color: #dc3545;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-options .logout-button:hover {
+  background-color: #c82333;
+}
+
+/* Media Query for responsive design */
+@media (max-width: 768px) {
+  .reservation-section {
+    grid-template-columns: 1fr;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .auth-options {
+    flex-direction: column;
+    gap: 10px;
+    position: static;
+    margin-top: 20px;
+  }
+
+  .auth-options a, .auth-options .logout-button {
+    width: 100%;
+    text-align: center;
+  }
+}

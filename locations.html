@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div id="header-placeholder"></div>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+   <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<!-- Bootstrap JS and Popper.js (required for some components) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</head>
+<style>
+  
+  /* General Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Styling for Map */
+#map {
+  height: 300px;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Branch List Styles */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+#branch-list {
+  margin: 20px auto;
+  padding: 0;
+  list-style-type: none;
+  width: 90%;
+  max-width: 600px;
+}
+
+#branch-list li {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px 0; /* Adds single line gap between each branch */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+#branch-list li:hover {
+  transform: translateY(-5px);
+}
+
+#branch-list li span {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Button Styling */
+button {
+  padding: 8px 16px;
+  background-color: #28a745; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+
+</style>
+<body>
+  
+  <div id="map"></div>
+  <h2>Available Branches</h2>
+  <ul id="branch-list"></ul>
+  <script src="headerLoader.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    const map = L.map('map').setView([12.9716, 77.5946], 10); // Default location: Bangalore
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: 'ajith',
+    }).addTo(map);
+
+    // Branch data
+    const branches = [
+      { id: 1, lat: 12.9716, lng: 77.5946, name: "Bangalore" },
+      { id: 2, lat: 12.2958, lng: 76.6394, name: "Mysore" },
+      { id: 3, lat: 12.9141, lng: 74.8560, name: "Mangalore" },
+    ];
+
+    // Add markers for branches on the map
+    branches.forEach(branch => {
+      const marker = L.marker([branch.lat, branch.lng]).addTo(map);
+      marker.bindPopup(`<b>${branch.name} Branch</b>`);
+
+      // Add branches to the list
+      const branchList = document.getElementById('branch-list');
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `
+        <span><b>${branch.name} Branch</b></span>
+        <a href="home.html">
+        <button onclick="bookBranch('${branch.name}')">Book Now</button></a>
+      `;
+      branchList.appendChild(listItem);
+    });
+
+    // Booking function
+    function bookBranch(branchName) {
+      fetch('location.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ branchName }),
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            alert(`Booking successful for the ${branchName} branch!`);
+            window.location.href = 'home.html'; // Redirect to home page
+          } else {
+            alert('Booking failed. Please try again.');
+          }
+        })
+        .catch(err => console.error(err));
+    }
+  </script>
+</body>
+</html>

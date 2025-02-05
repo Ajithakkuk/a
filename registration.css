@@ -1,0 +1,95 @@
+/* General Reset */
+body, h1, h2, p, form, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('images/newbglog.png'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  height: 87vh; /* Ensures it spans the full viewport height */
+}
+
+/* Optional: Styling for .container to make it semi-transparent */
+.container {
+  background: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.left-section h2 {
+  font-size: 24px;
+  color: #333; /* More accessible color */
+  margin-bottom: 15px;
+}
+
+.left-section p {
+  font-size: 14px;
+  color: #555; /* More consistent text color */
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 320px; /* Matches other form dimensions */
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd; /* Matches other form styles */
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745; /* Matches other button styles */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #218838; /* Matches hover effect */
+}
+
+
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+
+
+.logo {
+width: 60px;
+height: auto;
+border-radius: 5px;
+margin-bottom: 10px;
+}
